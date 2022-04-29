@@ -6,9 +6,12 @@
     --color-body: #918ca4;
 }
 
+/*Typography*/
+
+
 html {
 /* 62.5% of 16px = 10px */
-font-size: 16px;
+font-size: 62.5%;
 }
 
 
@@ -37,6 +40,36 @@ h3{
     font-size: 3rem;
   
 }
+
+/*New rule not to repeat the decoration for all anchors in the header, bottom bar and navigation pane as well*/
+a {
+    text-decoration: none; 
+}
+
+/*Links*/
+.link-arrow {
+color:var(--color-accent);
+text-transform: uppercase;
+font-size: 2rem;
+font-weight: bold;
+}
+
+.link-arrow::after {
+content: "-->";
+margin-left: 5px; /*to keep some distance in absolute wiht the "Link Arrow"*/
+transition: 0.15s;
+}
+
+.link-arrow:hover::after {
+    margin-left: 10px;
+}
+
+@media screen and (min-width:1024) {
+    .link-arrow {
+       font-size: 1.5rem; 
+    }
+}
+
 
 @media screen and (min-width: 1024px) {
    body {
