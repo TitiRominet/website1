@@ -86,5 +86,37 @@ transition: 0.15s;
        h3{
            font-size: 2.4rem;
        }
-   }
-}
+    }
+
+    /*Badges*/
+
+    .badge {
+        border-radius: 20px; /*Absolute value not to depend on the font size*/
+        font-size: 2rem;
+        font-weight: 600; /*All badges are in bold font*/
+        padding: 0.5rem 2rem; /*Vertical and Horizontal padding*/
+        white-space: nowrap; /*to prevent breaking menu titles even with limited spaces*/
+    }
+
+    .badge--primary {
+        background: var(--color-primary);
+        color: white;
+    }
+
+    .badge--secondary {
+        background: var(--color-secondary);
+        color: white;
+    }
+
+    .badge--small {
+        font-size: 1,6rem;
+    }
+
+    @media screen and (min-width:1024px){
+      .badge{
+          font-size: 1,5rem;
+      }  
+    }
+    .badge--small {
+        font-size: 1.2rem;
+    }
