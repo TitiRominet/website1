@@ -23,8 +23,8 @@ body    {
 }
 
 h1,h2,h3 {
-    color:var(--color-headings)
-    margin-bottom: 1rem;
+    color:var(--color-headings);
+    margin-bottom: 3rem;
 }
 
 h1 {
@@ -72,21 +72,23 @@ transition: 0.15s;
 
 
 @media screen and (min-width: 1024px) {
-   body {
-       font-size: 1.8rem;
-   } 
-   h1{
-       font-size: 8rem;
-
-       h2{
-           font-size:4rem;
-        
-       }
-
-       h3{
-           font-size: 2.4rem;
-       }
+    body {
+        font-size: 1.8rem;
+    } 
+    h1 {
+        font-size: 8rem;
     }
+    h2 {
+        font-size: 4rem;
+        
+    }
+
+    h3 {
+           font-size: 2.4rem;
+    }
+}
+   
+       
 
     /*Badges*/
 
@@ -119,4 +121,33 @@ transition: 0.15s;
     }
     .badge--small {
         font-size: 1.2rem;
+    }
+
+    /*Lists*/
+    .list {
+        list-style: none; /*To get rid of the default bullet points*/
+        padding-left: 0; /*Discard te left padding that all browsers apply by default*/
+        color: var(--color-headings);
+
+    }
+
+    .list--inline .list__item {
+        display: inline-block;
+        margin-right: 2rem;
+    }
+
+    .list-tick {
+        list-style-image: url(../css/components/images/tick.svg);
+        padding-left: 3rem;
+    }
+
+    .list--tick .list__item {
+        padding-left: 0.5rem;
+        padding-bottom: 1rem;
+    }
+
+    @media  screen and (min-width: 1024px) {
+        .list--tick .list__item {
+         padding-left: 0rem;
+        }
     }
